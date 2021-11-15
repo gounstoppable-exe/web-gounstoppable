@@ -1,0 +1,32 @@
+@font-face {
+  font-family: AgeoMedium;
+  src: url(../assets/AgeoMedium.otf);
+}
+@font-face {
+  font-family: AgeoBold;
+  src: url(../assets/AgeoBold.otf);
+}
+@font-face {
+  font-family: MonumentRegular;
+  src: url(../assets/MonumentExtendedRegular.otf);
+}
+@font-face {
+  font-family: MonumentBold;
+  src: url(../assets/MonumentExtendedBold.otf);
+}
+@font-face {
+  font-family: CriticalMass;
+  src: url(../assets/CriticalMassLDR.ttf);
+}
+@font-face {
+  font-family: MonumentUltrabold;
+  src: url(../assets/MonumentExtendedUltrabold.otf);
+}
+@font-face {
+  font-family: DharmaBold;
+  src: url(../assets/DharmaGothicC-Bold.ttf);
+}
+@font-face {
+  font-family: DharmaExBold;
+  src: url(../assets/DharmaGothicC-ExBold.ttf);
+}
