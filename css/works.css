@@ -197,40 +197,64 @@ body {
   background-color: var(--secondary);
   z-index: -1;
 }
-.main-about{
+.my-works {
+  overflow-x: hidden;
   width: 100vw;
-  min-height: calc(100vh - 5rem);
+  min-height: 100vh;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding-bottom: 5rem;
 }
-.left h1{
+.my-works h1 {
   font-family: var(--MonumUB);
   color: var(--white);
-  font-size: 2.2rem;
+  font-size: 2rem;
+  margin-top: 4rem;
 }
-.abt-text{
-  margin-top: 1.3rem;
+.works-images figure {
+  z-index: 1;
+  position: relative;
 }
-.left ul{
-  list-style-type: none;
+.works-images figure img {
+  max-width: 100%;
+  transition: 0.3s ease-in-out;
+  position: relative;
 }
-.left ul li{
-  margin-top: 0.6rem;
-  color: var(--white);
-  font-family: var(--AgeoM);
-  font-size: 1.2rem;
+.works-images figure img:hover {
+  filter: opacity(0.4);
 }
-.left ul li span{
+.img-des {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
   font-family: var(--AgeoB);
-}
-.left ul li a{
   color: var(--white);
+  font-size: 1.3rem;
+  width: 80vw;
+  visibility: hidden;
+  transition: 0.2s ease;
+  text-decoration: underline;
 }
-.abt-btns{
-  margin-top: 2.8rem;
+.works-images figure img:hover ~ .img-des {
+  visibility: visible;
 }
-.abt-btns a {
+.works-images {
+  margin-top: 4rem;
+  width: 80vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+  column-gap: 2rem;
+  row-gap: 2rem;
+}
+.works-btn {
+  margin-top: 4rem;
+}
+.works-btn a {
   font-family: var(--MonumUB);
   color: var(--primary);
   font-size: 0.8rem;
@@ -241,65 +265,32 @@ body {
   transition: 0.4s ease;
   margin-top: 2rem;
 }
-.abt-btns a:nth-child(2){
-  color: var(--secondary);
-  background-color: transparent;
-  margin-left: 1rem;
-}
-.abt-btns a:nth-child(2):hover{
-  color: var(--primary);
-  background-color: var(--secondary);
-}
-.abt-btns a:hover {
+.works-btn a:hover {
   color: var(--secondary);
   background-color: transparent;
 }
-.right img{
-  width: 23rem;
-}
-@media screen and (max-width: 982px) {
-  .left h1{
-    font-size: 1.9rem;
-  }
-  .left ul li{
-    font-size: 0.9rem;
-  }
-  .abt-btns a {
-    font-size: 0.6rem;
-  }
-  .right img{
-    width: 18rem;
+@media screen and (max-width: 641px) {
+  .my-works h1 {
+    font-size: 1.5rem;
   }
 }
-@media screen and (max-width: 672px){
-  .main-about{
-    justify-content: center;
-    flex-direction: column-reverse;
+@media screen and (max-width: 480px) {
+  .works-images figure img {
+    max-width: 80%;
   }
-  .right img{
-    width: 15rem;
-  }
-  .right{
-    margin-top: 2rem;
-  }
-  .left{
-    text-align: center;
-    margin-top: 4rem;
+  .works-images {
+    width: auto;
   }
 }
-@media screen and (max-width: 375px) {
-  .left h1{
-    font-size: 1.7rem;
+@media screen and (max-width: 353px) {
+  .works-images figure img {
+    max-width: 70%;
   }
-  .left ul li{
-    font-size: 0.8rem;
-  }
-  .abt-btns a {
-    font-size: 0.6rem;
-  }
-  .right img{
-    width: 13rem;
-  }
+}
+@media screen and (max-width: 425px){
+  .works-btn a {
+    font-size: 0.65rem;
+}
 }
 /* footer  */
 footer {
